@@ -53,19 +53,44 @@
 			for($i = 1; $i <= $_maxID; $i++)
 			{
 				$theme = mysql_query("SELECT * FROM tasks WHERE id = ". $i .""); 
-				while ($_rows = mysql_fetch_array($theme, MYSQL_BOTH)) { ?>
-				<div class="jumbotron">
-					<h1 class="display-3" style="font-size: 1.5rem;"><strong>ЗАДАНИЕ #<?=$i?>:</strong></h1>
-					<p class="lead"><?=$_rows[1]?></p>
-					
-					<button type="button" onclick="showAnswer('<?=$i?>', '1')" class="btn _show-1 btn-primary btn-sm" style="" id="_show-1-<?=$i?>">РЕШЕНИЕ</button>
-					
-					<button type="button" onclick="showAnswer('<?=$i?>', '2')" class="btn _show-1 btn-primary btn-sm" style="display: none" id="_show-2-<?=$i?>">СКРЫТЬ РЕШЕНИЕ</button>
-					
-					<p class="lead" id="_answer-<?=$i?>" style="display: none"><strong>ОТВЕТ:</strong> <?=$_rows[2]?></p>
-				</div>
+				while ($_rows = mysql_fetch_array($theme, MYSQL_BOTH)) 
+				{ ?>
+					<div class="jumbotron">
+						<h1 class="display-3" style="font-size: 1.5rem;"><strong>ЗАДАНИЕ #<?=$i?>:</strong></h1>
+						<p class="lead"><?=$_rows[1]?></p>
+						
+						<button type="button" onclick="showAnswer('<?=$i?>', '1')" class="btn _show-1 btn-primary btn-sm" style="" id="_show-1-<?=$i?>">РЕШЕНИЕ</button>
+						
+						<button type="button" onclick="showAnswer('<?=$i?>', '2')" class="btn _show-1 btn-primary btn-sm" style="display: none" id="_show-2-<?=$i?>">СКРЫТЬ РЕШЕНИЕ</button>
+						
+						<p class="lead" id="_answer-<?=$i?>" style="display: none"><strong>ОТВЕТ:</strong> <?=$_rows[2]?></p>
+						
+						<?
+						/*
+							Block with answer and verification
+						*/
+						?>	
+						
+						<form class="form-inline">
+							<div class="form-group">
+								<label class="sr-only" for="_answerblock">Ответ</label>
+								<input type="answer" class="form-control" id="answer-inp-<?=$i?>" placeholder="Ваш ответ">
+							</div>
+							
+							<?
+							/*
+								Get correct answer from database with selected @id
+							*/
+								$answer = mysql_result(mysql_query("SELECT `num-ans` FROM `tasks` WHERE `id` = ". $i .""), 0);
+							?>
+							
+							<a href="#" onclick="checkAnswer('answer-inp-<?=$i?>', '<?=$answer?>')" class="btn btn-default">Проверить</a>
+							<p id="result-answer-inp-<?=$i?>"></p>
+						</form>
+					</div>
 				<?}
 			}
+		
 		?>
 
       <footer class="footer">
