@@ -15,7 +15,6 @@ function showAnswer(id, state)
 		document.getElementById('_answer-'+ id +'').style.display=''; 
 		document.getElementById('_show-1-'+ id +'').style.display='none'; 
 		document.getElementById('_show-2-'+ id +'').style.display='';
-		document.getElementById('_answerBox-'+ id +'').style.display='';
 	} 
 		else 
 	// state when we need to close
@@ -23,7 +22,6 @@ function showAnswer(id, state)
 		document.getElementById('_answer-'+ id +'').style.display='none'; 
 		document.getElementById('_show-1-'+ id +'').style.display=''; 
 		document.getElementById('_show-2-'+ id +'').style.display='none';
-		document.getElementById('_answerBox-'+ id +'').style.display='none';
 	}
 }
 
