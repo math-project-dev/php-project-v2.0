@@ -83,8 +83,7 @@
 							*/
 								$answer = mysql_result(mysql_query("SELECT `num-ans` FROM `tasks` WHERE `id` = ". $i .""), 0);
 							?>
-							
-							<a href="#" onclick="checkAnswer('answer-inp-<?=$i?>', '<?=$answer?>')" class="btn btn-default">Проверить</a>
+							<button type="button" onclick="checkAnswer('answer-inp-<?=$i?>', '<?=$answer?>')" class="btn btn-success">Проверить</button>
 							<p id="result-answer-inp-<?=$i?>"></p>
 						</form>
 					</div>

@@ -42,7 +42,7 @@ function checkAnswer(name, correct)
 		if (_userans === correct)
 		// check for strong-correct statement
 		{
-			text = "<Ответ верный";
+			text = "Ответ верный";
 			document.getElementById('result-'+ name).style.color="green";
 		} else {
 			text = "Ответ неверный";

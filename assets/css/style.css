@@ -43,6 +43,9 @@ body {
   margin-right: auto;
 }
 
+p {
+  margin-top: 1vh;
+}
 /* Customize container */
 @media (min-width: 48em) {
   .container {
@@ -57,10 +60,12 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: .05rem solid #e5e5e5;
+  height: 570px;
 }
 .jumbotron .btn {
   padding: .5em 1em;
   font-size: 1.1rem;
+  margin-top: 1vh;
 }
 
 /* Supporting marketing content */
