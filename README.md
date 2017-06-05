@@ -1,7 +1,7 @@
 # php-project-v2.0
 A math assistant written in PHP, version 2.0. Here all the information about the project modules is documented, as well as the scripts used in the project. This is a simple tutorial how to use our project:
 
-All Javascript's onclick functions located **master/assets/js/onclick_funcs.js**. That is a simple preview of any our functions: 
+All Javascript's onclick functions located **/assets/js/onclick_funcs.js**. That is a simple preview of any our functions: 
 
 ```javascript
 function checkAnswer(name, correct)
