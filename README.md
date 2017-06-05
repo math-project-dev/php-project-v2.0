@@ -36,5 +36,8 @@ We are trying to document all of our code so that other users can safely use the
 // 		@param 	name 	Name of current element
 //		@param	correct	Correct answer
 ```
+Our project uses some frameworks and other plug-ins: 
+ * MathJAX
+ * Bootstrap
 
 All of PHP code has their header too with some words about that function or block of code. We welcome any help in the development of the school project and help in the implementation of functions and ideas! :v:
