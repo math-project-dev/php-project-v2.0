@@ -1,43 +1,28 @@
-# php-project-v2.0
-A math assistant written in PHP, version 2.0. Here all the information about the project modules is documented, as well as the scripts used in the project. This is a simple tutorial how to use our project:
+# Math assistant
 
-All Javascript's onclick functions located **/assets/js/onclick_funcs.js**. That is a simple preview of any our functions: 
+[![Build Status](https://travis-ci.org/math-project-dev/php-project.svg?branch=master)](https://travis-ci.org/math-project-dev/php-project)
+[![Uptime Robot status](https://img.shields.io/uptimerobot/status/m778918918-3e92c097147760ee39d02d36.svg)]()
+[![Jenkins tests](https://img.shields.io/jenkins/t/https/jenkins.qa.ubuntu.com/view/Precise/view/All%20Precise/job/precise-desktop-amd64_default.svg)]()
 
-```javascript
-function checkAnswer(name, correct)
-{
-	var _userans = document.getElementById(name).value;
-	
-	if ( _userans != "")
-	// check for null state
-	{
-		if (_userans === correct)
-		// check for strong-correct statement
-		{
-			text = "Ответ верный";
-			document.getElementById('result-'+ name).style.color="green";
-		} else {
-			text = "Ответ неверный";
-			document.getElementById('result-'+ name).style.color="red";
-		}
-		
-	} else {
-		text = "Введите ответ";
-		document.getElementById('result-'+ name).style.color="orange";
-	}
-	// show the result
-	document.getElementById('result-'+ name).innerHTML = text;
-}
+That assistant has been written using PHP  5.0, jQuery and Ajax technologies. That project is rework of first version of code cause the previous version is so bad.
+
+If you want contribute to this project you can put your own pull-request with your changes. That code uses Apache License. See below this topic. 
+
 ```
-We are trying to document all of our code so that other users can safely use the code for their own purposes. All of this functions have a header of their arguments and simple description:
+  php-project-v2.0
 
-```javascript
-// 		check correct answer
-// 		@param 	name 	Name of current element
-//		@param	correct	Correct answer
+  Copyright 2016 by present time by math-project-dev's team (0xe06d7363 and 0x452)
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
 ```
-Our project uses some frameworks and other plug-ins: 
- * MathJAX
- * Bootstrap
-
-All of PHP code has their header too with some words about that function or block of code. We welcome any help in the development of the school project and help in the implementation of functions and ideas! :v:
